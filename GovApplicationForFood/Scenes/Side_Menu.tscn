@@ -1,9 +1,134 @@
-[gd_scene format=3 uid="uid://bqj4qxmra1573"]
+[gd_scene load_steps=8 format=3 uid="uid://bqj4qxmra1573"]
+
+[ext_resource type="Script" path="res://Scenes/Side_Menu.gd" id="1_6vx0g"]
+[ext_resource type="Texture2D" uid="uid://d27u4pyjhvsiw" path="res://Themes/Assets/free-notebook-paper-vector.jpg" id="3_62ttg"]
+[ext_resource type="Texture2D" uid="uid://bw6wkrr1joeed" path="res://Themes/Assets/Scrap.tres" id="4_2684x"]
+[ext_resource type="FontFile" uid="uid://dv31ceffn5w6d" path="res://Themes/handwind/Handwind.ttf" id="4_ghiye"]
+[ext_resource type="Texture2D" uid="uid://co5x64bw7dmwr" path="res://Themes/Assets/pin-png-39483.png" id="5_52rer"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx6je"]
+atlas = ExtResource("3_62ttg")
+region = Rect2(375.065, 51.047, 656.176, 865.182)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a65ub"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Root" type="Control"]
 layout_mode = 3
+anchor_left = 0.55
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6vx0g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_xx6je")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a65ub")
+
+[node name="Page 1" type="Control" parent="TabContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Page 1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 38
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Page 1/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0.184314, 1)
+theme_override_constants/line_separation = -15
+theme_override_fonts/normal_font = ExtResource("4_ghiye")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/bold_italics_font_size = 50
+text = " Sara Gosberg
+
+ 37
+
+ from Rome
+
+ Lives alone
+
+ earns £155 a week
+
+ rent is £145 a month 
+ - £79 council tax.
+
+ Likes peaches"
+autowrap_mode = 0
+
+[node name="Page 2" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Page 3" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Page 4" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -45.0
+offset_right = 216.0
+offset_bottom = 130.0
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_2684x")
+texture_pressed = ExtResource("4_2684x")
+texture_hover = ExtResource("4_2684x")
+
+[node name="TextureRect" type="TextureRect" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -15.5
+offset_right = 500.0
+offset_bottom = 441.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_52rer")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
