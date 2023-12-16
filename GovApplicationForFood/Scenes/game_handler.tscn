@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq41jm6qonqww"]
+
+[ext_resource type="Script" path="res://Scenes/state_machine.gd" id="1_qoil1"]
+[ext_resource type="Script" path="res://Scenes/start.gd" id="2_4cp6p"]
+
+[node name="game_handler" type="Node"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="state_machine" type="Node" parent="."]
+script = ExtResource("1_qoil1")
+
+[node name="start" type="Node" parent="state_machine"]
+script = ExtResource("2_4cp6p")
+
+[node name="page_1" type="Node" parent="state_machine"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_1"]
+
+[node name="page_2" type="Node" parent="state_machine"]
+
+[node name="page_3" type="Node" parent="state_machine"]
+
+[node name="page_4" type="Node" parent="state_machine"]
+
+[node name="page_5" type="Node" parent="state_machine"]
+
+[node name="page_6" type="Node" parent="state_machine"]
+
+[node name="page_7" type="Node" parent="state_machine"]
+
+[node name="page_8" type="Node" parent="state_machine"]
+
+[node name="page_9" type="Node" parent="state_machine"]
+
+[node name="page_10" type="Node" parent="state_machine"]

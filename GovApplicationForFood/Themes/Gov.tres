@@ -1,0 +1,58 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://b1loyp6h3k2rk"]
+
+[ext_resource type="FontFile" uid="uid://dkx3hhlvgjbdo" path="res://Themes/raoul_transport_britannique/RaoulTRANSPORTBritannique.ttf" id="1_q6gp4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0ip0"]
+bg_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5b8d"]
+bg_color = Color(0, 0.352941, 0.203922, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42qr3"]
+bg_color = Color(0, 0.470588, 0.27451, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0ong"]
+bg_color = Color(0, 0.352941, 0.203922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.790424, 0.851075, 0, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fgs1r"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.811765, 0.843137, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtso5"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6tqj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6xsas"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kn2b6"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("1_q6gp4")
+Button/styles/disabled = SubResource("StyleBoxFlat_e0ip0")
+Button/styles/hover = SubResource("StyleBoxFlat_d5b8d")
+Button/styles/normal = SubResource("StyleBoxFlat_42qr3")
+Button/styles/pressed = SubResource("StyleBoxFlat_f0ong")
+CheckBox/styles/focus = SubResource("StyleBoxFlat_fgs1r")
+CheckBox/styles/hover = SubResource("StyleBoxFlat_gtso5")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxFlat_e6tqj")
+CheckBox/styles/normal = SubResource("StyleBoxFlat_6xsas")
+Panel/styles/panel = SubResource("StyleBoxFlat_kn2b6")

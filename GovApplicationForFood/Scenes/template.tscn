@@ -1,0 +1,276 @@
+[gd_scene load_steps=15 format=3 uid="uid://bjura10lrrqyq"]
+
+[ext_resource type="Script" path="res://Scenes/Root.gd" id="1_ahh4n"]
+[ext_resource type="Texture2D" uid="uid://bh1t73nxu40g7" path="res://Themes/Assets/govuk-schema-placeholder-16x9-4233cd42671827e266e284c4d5ae68fb600bd9f9e35dda663ccabbc2b6ab7ec3.png" id="1_lxyhg"]
+[ext_resource type="FontFile" uid="uid://dkx3hhlvgjbdo" path="res://Themes/raoul_transport_britannique/RaoulTRANSPORTBritannique.ttf" id="2_nivrh"]
+[ext_resource type="Texture2D" uid="uid://cnihx6vjdcspl" path="res://Themes/Assets/uk-government-crown-crest-logo-9FDF513DBC-seeklogo.com.png" id="3_tarsu"]
+[ext_resource type="Theme" uid="uid://dkvylaad2lakv" path="res://Themes/Button.tres" id="4_so30d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpj6w"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0fao"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnftw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u22cn"]
+atlas = ExtResource("1_lxyhg")
+region = Rect2(250.002, 438.907, 1530.31, 308.655)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slp7u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujk5d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prqhs"]
+bg_color = Color(0.184314, 0.615686, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g063k"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65idh"]
+bg_color = Color(0.929412, 0.929412, 0.929412, 1)
+border_width_top = 1
+border_color = Color(0.329412, 0.329412, 0.329412, 1)
+
+[node name="Root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ahh4n")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpj6w")
+metadata/_edit_lock_ = true
+
+[node name="Heading Background" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -576.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpj6w")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+metadata/_edit_lock_ = true
+
+[node name="Top Bar" type="PanelContainer" parent="Background/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k0fao")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Background/VBoxContainer2/Top Bar"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_xnftw")
+
+[node name="TextureRect" type="TextureRect" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_u22cn")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Panel2" type="Panel" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_slp7u")
+
+[node name="Panel4" type="Panel" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_slp7u")
+
+[node name="Panel5" type="Panel" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_slp7u")
+
+[node name="Panel6" type="Panel" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_slp7u")
+
+[node name="Panel7" type="Panel" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_slp7u")
+
+[node name="MenuButton" type="MenuButton" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nivrh")
+text = "V Menu"
+item_count = 1
+popup/item_0/text = "An Error has occured "
+popup/item_0/icon = ExtResource("3_tarsu")
+popup/item_0/id = 0
+
+[node name="Panel3" type="Panel" parent="Background/VBoxContainer2/Top Bar/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_slp7u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -800
+alignment = 1
+
+[node name="Blanker" type="Panel" parent="Background/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ujk5d")
+
+[node name="Blue Highlight" type="Panel" parent="Background/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_prqhs")
+
+[node name="Blanker2" type="Panel" parent="Background/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_prqhs")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Background/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Blanker" type="Panel" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ujk5d")
+
+[node name="Label3" type="Label" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Home"
+label_settings = SubResource("LabelSettings_g063k")
+
+[node name="Label2" type="Label" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = ">"
+label_settings = SubResource("LabelSettings_g063k")
+
+[node name="Label4" type="Label" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Benefits"
+label_settings = SubResource("LabelSettings_g063k")
+
+[node name="Label5" type="Label" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = ">"
+label_settings = SubResource("LabelSettings_g063k")
+
+[node name="Label6" type="Label" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Benefits and financial support if you're on a low income"
+label_settings = SubResource("LabelSettings_g063k")
+
+[node name="Blanker2" type="Panel" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_prqhs")
+
+[node name="Blanker3" type="Panel" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_prqhs")
+
+[node name="Blanker4" type="Panel" parent="Background/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_prqhs")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_65idh")
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -14.5
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Panel3" type="Panel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nivrh")
+theme_override_font_sizes/font_size = 11
+text = "Is this page useful?"
+
+[node name="Yes" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_so30d")
+theme_override_fonts/font = ExtResource("2_nivrh")
+text = "   Yes   "
+
+[node name="No" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_so30d")
+theme_override_fonts/font = ExtResource("2_nivrh")
+text = "   No   "
+
+[node name="Panel" type="Panel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Report" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_so30d")
+theme_override_fonts/font = ExtResource("2_nivrh")
+text = " Report a problem with this page "
+
+[node name="Panel2" type="Panel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[connection signal="pressed" from="Panel/HBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Report" to="." method="_on_report_pressed"]
