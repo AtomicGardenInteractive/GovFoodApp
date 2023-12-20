@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bn6ao3x6bvmir"]
+
+[ext_resource type="FontFile" uid="uid://dkx3hhlvgjbdo" path="res://Themes/raoul_transport_britannique/RaoulTRANSPORTBritannique.ttf" id="1_ytpgk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk2dq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vs55"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilxjf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[resource]
+default_font = ExtResource("1_ytpgk")
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/styles/normal = SubResource("StyleBoxFlat_dk2dq")
+TextEdit/colors/font_color = Color(0, 0, 0, 1)
+TextEdit/styles/focus = SubResource("StyleBoxFlat_8vs55")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_ilxjf")

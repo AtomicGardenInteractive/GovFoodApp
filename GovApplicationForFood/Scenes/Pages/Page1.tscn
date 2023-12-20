@@ -1,0 +1,163 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch7em2ngr2a5y"]
+
+[ext_resource type="PackedScene" uid="uid://bjura10lrrqyq" path="res://Scenes/template.tscn" id="1_kuw1w"]
+[ext_resource type="Theme" uid="uid://bn6ao3x6bvmir" path="res://Themes/Questions.tres" id="2_a6d6f"]
+[ext_resource type="Theme" uid="uid://b1loyp6h3k2rk" path="res://Themes/Gov.tres" id="3_yaqwj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdapc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="State" instance=ExtResource("1_kuw1w")]
+
+[node name="Control" type="Control" parent="Root" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Control" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175
+anchor_top = 0.0972222
+anchor_right = 0.898958
+anchor_bottom = 0.951852
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+text = "Account details"
+
+[node name="Label2" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "About You"
+
+[node name="Panel" type="Panel" parent="Root/Control/MarginContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 18.53)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qdapc")
+
+[node name="Label3" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_font_sizes/font_size = 12
+text = "Enter your name as it appears on your passport or offical documents."
+
+[node name="Label4" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "First name"
+
+[node name="LineEdit" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer" index="5"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+caret_blink = true
+
+[node name="Label5" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Middle names"
+
+[node name="LineEdit2" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer" index="7"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+caret_blink = true
+
+[node name="Label6" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Last name"
+
+[node name="LineEdit3" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer" index="9"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+caret_blink = true
+
+[node name="Label7" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="10"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Date of Birth"
+
+[node name="Label8" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="11"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 12
+text = "For example, 18 9 2012"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer" index="12"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Day"
+
+[node name="LineEdit" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" index="0"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Month"
+
+[node name="LineEdit" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" index="1"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" index="0"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Year"
+
+[node name="LineEdit" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" index="1"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+
+[node name="Label10" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="13"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Date of Birth"
+
+[node name="Label9" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="14"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 12
+text = "We will send you a code to comfirm it is your email address. We may
+also email you about your claim, make sure you can access this email 
+address easily."
+
+[node name="LineEdit4" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer" index="15"]
+layout_mode = 2
+theme = ExtResource("2_a6d6f")
+caret_blink = true
+
+[node name="Button" type="Button" parent="Root/Control/MarginContainer/VBoxContainer" index="16"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_yaqwj")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Continue"

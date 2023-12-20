@@ -1,43 +1,63 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq41jm6qonqww"]
 
 [ext_resource type="PackedScene" uid="uid://bqj4qxmra1573" path="res://Scenes/Side_Menu.tscn" id="1_ex603"]
+[ext_resource type="Script" path="res://Scenes/SavedData.gd" id="1_k4oxa"]
 [ext_resource type="Script" path="res://Scenes/state_machine.gd" id="1_qoil1"]
-[ext_resource type="Script" path="res://Scenes/start.gd" id="2_4cp6p"]
-[ext_resource type="PackedScene" uid="uid://bjura10lrrqyq" path="res://Scenes/template.tscn" id="4_ya1lj"]
+[ext_resource type="PackedScene" uid="uid://ch7em2ngr2a5y" path="res://Scenes/Pages/Page1.tscn" id="3_l1ety"]
 
 [node name="game_handler" type="Node"]
+
+[node name="SavedData" type="Node" parent="."]
+script = ExtResource("1_k4oxa")
 
 [node name="state_machine" type="Node" parent="."]
 script = ExtResource("1_qoil1")
 
 [node name="start" type="Node" parent="state_machine"]
-script = ExtResource("2_4cp6p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/start"]
 
 [node name="page_1" type="Node" parent="state_machine"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_1"]
 
-[node name="Root" parent="state_machine/page_1/CanvasLayer" instance=ExtResource("4_ya1lj")]
+[node name="State" parent="state_machine/page_1/CanvasLayer" instance=ExtResource("3_l1ety")]
 
 [node name="page_2" type="Node" parent="state_machine"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_2"]
+
 [node name="page_3" type="Node" parent="state_machine"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_3"]
 
 [node name="page_4" type="Node" parent="state_machine"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_4"]
+
 [node name="page_5" type="Node" parent="state_machine"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_5"]
 
 [node name="page_6" type="Node" parent="state_machine"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_6"]
+
 [node name="page_7" type="Node" parent="state_machine"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_7"]
 
 [node name="page_8" type="Node" parent="state_machine"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_8"]
+
 [node name="page_9" type="Node" parent="state_machine"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_9"]
 
 [node name="page_10" type="Node" parent="state_machine"]
 
-[node name="page_11" type="Node" parent="state_machine"]
+[node name="CanvasLayer" type="CanvasLayer" parent="state_machine/page_10"]
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
