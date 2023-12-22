@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqj4qxmra1573"]
+[gd_scene load_steps=9 format=3 uid="uid://bqj4qxmra1573"]
 
 [ext_resource type="Script" path="res://Scenes/Side_Menu.gd" id="1_6vx0g"]
 [ext_resource type="Texture2D" uid="uid://d27u4pyjhvsiw" path="res://Themes/Assets/free-notebook-paper-vector.jpg" id="3_62ttg"]
 [ext_resource type="Texture2D" uid="uid://bw6wkrr1joeed" path="res://Themes/Assets/Scrap.tres" id="4_2684x"]
 [ext_resource type="FontFile" uid="uid://dv31ceffn5w6d" path="res://Themes/handwind/Handwind.ttf" id="4_ghiye"]
+[ext_resource type="Texture2D" uid="uid://cgcrwgeo1b7ca" path="res://Themes/Assets/Screenshot 2023-12-22 124713.png" id="4_pbo6u"]
 [ext_resource type="Texture2D" uid="uid://co5x64bw7dmwr" path="res://Themes/Assets/pin-png-39483.png" id="5_52rer"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xx6je"]
@@ -74,9 +75,7 @@ theme_override_font_sizes/italics_font_size = 50
 theme_override_font_sizes/bold_italics_font_size = 50
 text = " Sara Gosberg
 
- 37
-
- from Rome
+ born 19th of janurary 1984
 
  Lives alone
 
@@ -84,21 +83,122 @@ text = " Sara Gosberg
 
  rent is £145 a month 
  - £79 council tax.
-
- Likes peaches"
+"
 autowrap_mode = 0
 
 [node name="Page 2" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
 
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Page 2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 38
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Page 2/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0.184314, 1)
+theme_override_constants/line_separation = -15
+theme_override_fonts/normal_font = ExtResource("4_ghiye")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/bold_italics_font_size = 50
+text = " Sgosberg@hotmail.co.uk
+
+01425 67890
+
+GH 293754 G"
+autowrap_mode = 0
+
 [node name="Page 3" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
 
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Page 3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 38
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Page 3/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0.184314, 1)
+theme_override_constants/line_separation = -15
+theme_override_fonts/normal_font = ExtResource("4_ghiye")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/bold_italics_font_size = 50
+text = " Professional Experience
+
+ Marketing Manager
+ ABC Company, Plymouth
+ June 2018 - Present
+
+ Lead a team of 8 marketing professionals in developing and executing comprehensive marketing strategies.
+ Implemented successful campaigns resulting in a 30% increase in brand visibility and a 25% rise in customer engagement.
+ Oversaw product launches, market research, and collaborated with sales teams to optimize marketing efforts.
+ Senior Marketing Specialist
+ XYZ Corporation, Plymouth
+ January 2012 - May 2018
+
+ Managed key client accounts, fostering relationships and delivering tailored marketing solutions.
+ Initiated and executed social media campaigns, contributing to a 40% growth in online engagement.
+ Conducted market analysis, identifying new opportunities and recommending strategic initiatives.
+ Marketing Coordinator
+ DEF Agency, Plymouth
+ August 2006 - December 2011
+
+ Assisted in the development and implementation of marketing plans for diverse clients.
+ Coordinated promotional events and managed communication strategies across multiple platforms.
+ Analyzed campaign performance metrics to optimize marketing strategies.
+ Early Career Highlights
+
+ Assistant Marketing Intern
+ GHI Enterprises, Plymouth
+ Summer 2004
+
+ Supported marketing team in various tasks including market research, content creation, and campaign analysis.
+
+ Education
+
+ Master of Business Administration (MBA)
+ Plymouth University, Plymouth
+ Graduated: 2006
+
+ Bachelor of Arts in Marketing
+ Plymouth State College, Plymouth
+ Graduated: 2004"
+
 [node name="Page 4" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Page 4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 38
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Page 4/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_pbo6u")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 1

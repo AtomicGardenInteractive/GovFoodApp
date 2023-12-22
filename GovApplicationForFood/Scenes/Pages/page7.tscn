@@ -1,0 +1,264 @@
+[gd_scene load_steps=6 format=3 uid="uid://7a2c3k4w8eyf"]
+
+[ext_resource type="PackedScene" uid="uid://bjura10lrrqyq" path="res://Scenes/template.tscn" id="1_1a27d"]
+[ext_resource type="Theme" uid="uid://b1loyp6h3k2rk" path="res://Themes/Gov.tres" id="2_0ub4k"]
+[ext_resource type="Script" path="res://Scenes/Pages/page7.gd" id="2_jg5s1"]
+[ext_resource type="Theme" uid="uid://bn6ao3x6bvmir" path="res://Themes/Questions.tres" id="3_eafrb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gwsk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="State" instance=ExtResource("1_1a27d")]
+script = ExtResource("2_jg5s1")
+
+[node name="Control" type="Control" parent="Root" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Control" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175
+anchor_top = 0.0972222
+anchor_right = 0.898958
+anchor_bottom = 0.951852
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+text = "Background"
+
+[node name="Label2" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Education and training"
+
+[node name="Panel" type="Panel" parent="Root/Control/MarginContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 18.53)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7gwsk")
+
+[node name="Label3" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_font_sizes/font_size = 12
+text = "Click all that apply"
+
+[node name="Label7" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Formal education"
+
+[node name="Label4" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_font_sizes/font_size = 12
+text = "Select any that you attended for any amount of time."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer" index="6"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Pre-school"
+
+[node name="CheckBox2" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Primary school"
+
+[node name="CheckBox3" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="2"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Secondary school"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" index="0"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "High school"
+
+[node name="CheckBox3" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" index="1"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Boarding school"
+
+[node name="CheckBox4" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" index="2"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Faith school"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="2"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" index="0"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "College"
+
+[node name="CheckBox4" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" index="1"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "University"
+
+[node name="Label10" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Informal education"
+
+[node name="Label9" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 12
+text = "Select any that you attended or exprienced for any amout of time."
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer" index="9"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2" index="0"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" index="0"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Parents teaching"
+
+[node name="CheckBox2" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" index="1"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Grand parents teaching"
+
+[node name="CheckBox3" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" index="2"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Siblings teaching"
+
+[node name="CheckBox4" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" index="3"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Attending a faith service"
+
+[node name="CheckBox5" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" index="4"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Thinking about others"
+
+[node name="CheckBox6" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" index="5"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Speaking with dissidents"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2" index="1"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2" index="0"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Watching educational 
+programing on televison"
+
+[node name="CheckBox3" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2" index="1"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Listening to educational 
+programing on the radio"
+
+[node name="CheckBox4" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2" index="2"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Using educational websites"
+
+[node name="CheckBox5" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2" index="3"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Reading a newspaper"
+
+[node name="CheckBox6" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2" index="4"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Listening to music"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2" index="2"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer3" index="0"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Friends teaching"
+
+[node name="CheckBox4" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer3" index="1"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Reading state website"
+
+[node name="CheckBox5" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer3" index="2"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Playing with educational toys"
+
+[node name="CheckBox6" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer3" index="3"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Thinking about the world"
+
+[node name="CheckBox7" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer3" index="4"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Eating healthy foods"
+
+[node name="CheckBox8" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer3" index="5"]
+layout_mode = 2
+theme = ExtResource("3_eafrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Looking at a map"
+
+[node name="Button" type="Button" parent="Root/Control/MarginContainer/VBoxContainer" index="10"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_0ub4k")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Continue"
+
+[connection signal="pressed" from="Root/Control/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

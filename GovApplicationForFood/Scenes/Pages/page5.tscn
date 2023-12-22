@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0l2jkupq1oca"]
+
+[ext_resource type="PackedScene" uid="uid://bjura10lrrqyq" path="res://Scenes/template.tscn" id="1_7u8xh"]
+[ext_resource type="Theme" uid="uid://b1loyp6h3k2rk" path="res://Themes/Gov.tres" id="2_3s5gx"]
+[ext_resource type="Script" path="res://Scenes/Pages/page5.gd" id="2_pxuh5"]
+[ext_resource type="Theme" uid="uid://bn6ao3x6bvmir" path="res://Themes/Questions.tres" id="3_bfi3h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfcn7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_qbkvf"]
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 1)
+
+[node name="State" instance=ExtResource("1_7u8xh")]
+script = ExtResource("2_pxuh5")
+
+[node name="Control" type="Control" parent="Root" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Control" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175
+anchor_top = 0.0972222
+anchor_right = 0.754687
+anchor_bottom = 1.26852
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+text = "Claim terms and conditions"
+
+[node name="Label2" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Important information"
+
+[node name="Panel" type="Panel" parent="Root/Control/MarginContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 18.53)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dfcn7")
+
+[node name="Label4" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Please read the blow carefully."
+
+[node name="Label9" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 12
+text = "You must accept the terms before you may continue."
+
+[node name="CheckBox" type="CheckBox" parent="Root/Control/MarginContainer/VBoxContainer" index="5"]
+layout_mode = 2
+theme = ExtResource("3_bfi3h")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "I have read and understand."
+
+[node name="Button" type="Button" parent="Root/Control/MarginContainer/VBoxContainer" index="6"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_3s5gx")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Continue"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Root" index="3"]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 305.0
+offset_right = 1457.0
+offset_bottom = 1022.0
+theme = SubResource("Theme_qbkvf")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "1.	Employment Status: To be eligible for unemployment benefits, individuals must typically have been employed, actively seeking work, and have lost their job due to reasons beyond their control, such as layoffs, company closures, or reductions in force. Voluntary resignations or dismissals due to misconduct are often excluded from eligibility.
+
+2.	Work History: Most systems require a minimum work history or a specific duration of employment during a base period, which varies by location. This base period could be the last four completed calendar quarters or a similar timeframe. Applicants must have earned a minimum amount of wages during this period.
+
+3.	Active Job Search: Unemployment benefits are usually available for individuals actively seeking new employment opportunities. Proof of job search activities, such as applying for jobs or attending interviews, may be required regularly to continue receiving benefits.
+
+4.	Availability and Ability to Work: Applicants must be physically able to work and available for suitable job opportunities. However, rules regarding what constitutes suitable work can vary. Some considerations may include the individual's skills, previous work experience, education, and the local job market.
+
+5.	Registration and Reporting: In some regions, applicants may need to register with the state employment service or job center and regularly report their job search activities or any income earned while receiving benefits.
+
+6.	Citizenship and Residency: Eligibility for unemployment benefits may be limited to citizens or legal residents of a country or region. Requirements might differ for non-citizens, such as having a work visa or legal permission to work.
+
+7.	Additional Circumstances: Certain situations, such as being laid off due to natural disasters, health emergencies, or specific economic conditions, might qualify individuals for additional benefits or extensions beyond the standard duration.
+
+Benefits fraud, particularly in the context of unemployment benefits, can have serious legal and financial consequences. Here are some of the potential repercussions:
+
+a.	Legal Penalties: Committing benefits fraud is considered a criminal offense in many jurisdictions. Those found guilty may face legal action, including fines, probation, community service, or even imprisonment, depending on the severity of the fraud and the laws in the specific region.
+
+b.	Repayment of Funds: Perpetrators of benefits fraud are typically required to repay the wrongfully obtained funds. This includes the amount received fraudulently and possibly additional penalties or fines.
+
+c.	Disqualification from Future Benefits: Individuals found guilty of fraud may be permanently or temporarily disqualified from receiving any future benefits. This could significantly impact their financial stability, especially during times of genuine need.
+
+d.	Civil Penalties: In addition to criminal penalties, some regions also impose civil penalties for benefits fraud. These penalties can result in additional fines or financial liabilities beyond the repayment of the fraudulent amount.
+
+By agreeing to this clause you are allowing the use of your data and personal information in the pursuite of justice and the destruction of his majestys enemies be they foreign or domestic.
+
+e.	Damage to Reputation: Being convicted of fraud can damage an individual's reputation and credibility. It might affect their ability to secure future employment or access other forms of financial assistance.
+
+f.	Investigation and Legal Costs: Undergoing an investigation for benefits fraud can be an emotionally and financially draining experience. Legal fees, court costs, and other related expenses can add up, further exacerbating the financial strain on the individual involved.
+
+g.	Lengthy Legal Processes: Legal proceedings related to benefits fraud can be lengthy and stressful, impacting the individual's personal and professional life. It can take a toll on mental health and overall well-being.
+
+"
+
+[connection signal="pressed" from="Root/Control/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpomo16bx1jar"]
+
+[ext_resource type="PackedScene" uid="uid://bjura10lrrqyq" path="res://Scenes/template.tscn" id="1_mxabh"]
+[ext_resource type="Script" path="res://Start.gd" id="2_ffw2d"]
+[ext_resource type="Theme" uid="uid://b1loyp6h3k2rk" path="res://Themes/Gov.tres" id="3_7cgsk"]
+[ext_resource type="Texture2D" uid="uid://dms7j30s1hvwc" path="res://Themes/Assets/Screenshot 2023-12-22 132903.png" id="4_l1nu7"]
+[ext_resource type="Texture2D" uid="uid://cxy8yy6k6lefv" path="res://Themes/Assets/Screenshot 2023-12-22 133052.png" id="5_nsbac"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkluh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="State" instance=ExtResource("1_mxabh")]
+script = ExtResource("2_ffw2d")
+
+[node name="Control" type="Control" parent="Root" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Control" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175
+anchor_top = 0.0972222
+anchor_right = 0.898958
+anchor_bottom = 0.951852
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label2" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Applying for Money for Food"
+
+[node name="Panel" type="Panel" parent="Root/Control/MarginContainer/VBoxContainer" index="1"]
+custom_minimum_size = Vector2(0, 18.53)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kkluh")
+
+[node name="Label4" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "The trussell trust has said that  "
+
+[node name="Label5" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "\"Three main factors combine to prevent people from having sufficient income to avoid food insecurity,
+and leave them having to turn to  food banks: 
+•  The design and delivery of the social  security system. 
+•  Work which does not provide sufficient protection from financial hardship. 
+•  Difficulty accessing suitable jobs, especially for disabled people, 
+   people with caring responsibilities and parents (especially mothers). \""
+
+[node name="Label10" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This experience is designed to closely replicate the feeling of apply for social security in the UK."
+
+[node name="Label9" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 12
+text = "It is often frustrating, confusing and difficult to apply for universal credit, 
+which is only exacerbated by any number of learning disabilities that the 
+claimant more that likely possesses.
+
+There are notes on the right that provide you with the information you need 
+to apply on behalf of the fictional Sara Gosberg. 
+
+Good Luck.
+"
+
+[node name="Button" type="Button" parent="Root/Control/MarginContainer/VBoxContainer" index="6"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_7cgsk")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Begin"
+
+[node name="TextureRect" type="TextureRect" parent="Root/Control" index="1"]
+layout_mode = 0
+offset_left = 1285.0
+offset_top = 398.0
+offset_right = 1657.0
+offset_bottom = 611.0
+texture = ExtResource("4_l1nu7")
+
+[node name="TextureRect2" type="TextureRect" parent="Root/Control" index="2"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 101.0
+offset_right = 473.0
+offset_bottom = 314.0
+texture = ExtResource("5_nsbac")
+stretch_mode = 2
+
+[connection signal="pressed" from="Root/Control/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

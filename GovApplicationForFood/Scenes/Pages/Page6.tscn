@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc3ooi6iru0m1"]
+
+[ext_resource type="PackedScene" uid="uid://bjura10lrrqyq" path="res://Scenes/template.tscn" id="1_l5ix0"]
+[ext_resource type="Theme" uid="uid://bn6ao3x6bvmir" path="res://Themes/Questions.tres" id="2_birev"]
+[ext_resource type="Script" path="res://Scenes/Pages/Page6.gd" id="2_cooxb"]
+[ext_resource type="Theme" uid="uid://b1loyp6h3k2rk" path="res://Themes/Gov.tres" id="3_2n443"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bprnc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="State" instance=ExtResource("1_l5ix0")]
+script = ExtResource("2_cooxb")
+
+[node name="Control" type="Control" parent="Root" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Control" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175
+anchor_top = 0.0972222
+anchor_right = 0.898958
+anchor_bottom = 0.951852
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+text = "Account details"
+
+[node name="Label2" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "National insurance number"
+
+[node name="Panel" type="Panel" parent="Root/Control/MarginContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 18.53)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bprnc")
+
+[node name="Label10" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Enter your national insurance number"
+
+[node name="Label9" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 12
+text = "The number should be 9 digets, with the first 2 and the last being letters."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/Control/MarginContainer/VBoxContainer" index="5"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+theme = ExtResource("2_birev")
+max_length = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ColorRect" type="ColorRect" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer" index="0"]
+layout_mode = 2
+color = Color(0.403922, 0.403922, 0.403922, 1)
+
+[node name="SpinBox" type="SpinBox" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/ColorRect" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 100000.0
+max_value = 999999.0
+value = 100000.0
+
+[node name="ColorRect" type="ColorRect" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/ColorRect/SpinBox" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.25098)
+
+[node name="LineEdit2" type="LineEdit" parent="Root/Control/MarginContainer/VBoxContainer/HBoxContainer" index="2"]
+layout_mode = 2
+theme = ExtResource("2_birev")
+max_length = 1
+
+[node name="Button" type="Button" parent="Root/Control/MarginContainer/VBoxContainer" index="6"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_2n443")
+text = "Continue"
+
+[connection signal="pressed" from="Root/Control/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

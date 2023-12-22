@@ -9,7 +9,7 @@ func enter():
 	show()
 
 func exit():
-	pass
+	hide()
 
 func Update(_delta: float):
 	pass

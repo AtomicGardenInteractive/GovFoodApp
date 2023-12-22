@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://lrq0cv146vki"]
+
+[ext_resource type="PackedScene" uid="uid://bjura10lrrqyq" path="res://Scenes/template.tscn" id="1_pey5u"]
+[ext_resource type="Script" path="res://Scenes/Pages/Page 8.gd" id="2_3sjhn"]
+[ext_resource type="Theme" uid="uid://b1loyp6h3k2rk" path="res://Themes/Gov.tres" id="2_d718p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nivqk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="State" instance=ExtResource("1_pey5u")]
+script = ExtResource("2_3sjhn")
+
+[node name="Control" type="Control" parent="Root" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Control" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175
+anchor_top = 0.0972222
+anchor_right = 0.898958
+anchor_bottom = 0.951852
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/Control/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+text = "Identity verifaction"
+
+[node name="Label2" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Proof of identity"
+
+[node name="Panel" type="Panel" parent="Root/Control/MarginContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 18.53)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nivqk")
+
+[node name="Label4" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "We will send a package in the post to the address you used to set up the account. 
+It will contain two vials, one is for your blood sample and the other is for a 
+neighbours. Please post the samples back to use as soon as possible 
+after taking them as the blood will spoil if left too long and you will have to 
+reapply for another.
+"
+
+[node name="Panel2" type="Panel" parent="Root/Control/MarginContainer/VBoxContainer" index="4"]
+custom_minimum_size = Vector2(0, 18.53)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nivqk")
+
+[node name="Label5" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "We might also use your details to assess the people you live with and neighbours."
+
+[node name="Label10" type="Label" parent="Root/Control/MarginContainer/VBoxContainer" index="6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "You application will be procced in no more than 4 weeks
+upon our receipt of your blood."
+
+[node name="Button" type="Button" parent="Root/Control/MarginContainer/VBoxContainer" index="7"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_d718p")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Submit"
+
+[connection signal="pressed" from="Root/Control/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
